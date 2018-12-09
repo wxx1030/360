@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>360安全浏览器</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div class="fullpage">
+		<div class="page first">
+			<div class="logo"></div>
+			<div class="text">
+				<img src="./images/text_1.png" alt="">
+				<img src="./images/text_2.png" alt="">
+				<img src="./images/text_3.png" alt="">
+				<img src="./images/text_4.png" alt="">
+				<img src="./images/text_5.png" alt="">
+				<img src="./images/text_6.png" alt="">
+				<img src="./images/text_7.png" alt="">
+				<img src="./images/text_8.png" alt="">
+			</div>
+			<div class="info"></div>
+		</div>
+		<div class="page second">
+			<!-- 盾牌 -->
+			<div class="shield">
+				<img src="./images/shield_1.png" alt="">
+				<img src="./images/shield_2.png" alt="">
+				<img src="./images/shield_3.png" alt="">
+				<img src="./images/shield_4.png" alt="">
+				<img src="./images/shield_5.png" alt="">
+				<img src="./images/shield_6.png" alt="">
+				<img src="./images/shield_7.png" alt="">
+				<img src="./images/shield_8.png" alt="">
+				<img src="./images/shield_9.png" alt="">
+			</div>
+			<!-- 其他 -->
+			<div class="info"></div>
+		</div>
+		<div class="page third">
+			<!-- 其它信息 -->
+			<div class="info"></div>
+			<!-- 圆 -->
+			<div class="circle"></div>
+			<!-- 火箭 -->
+			<div class="rocket"></div>
+		</div>
+		<div class="page forth">
+			<!-- 搜索 -->
+			<div class="search">
+				<!-- 搜索框 -->
+				<div class="search_box"></div>
+				<!-- 搜索词 -->
+				<div class="key"></div>
+				<!-- 搜索结果 -->
+				<div class="search_result">
+
+				</div>
+			</div>
+			<!-- 其他 -->
+            <div class="info"></div>
+		</div>
+		<div class="page"></div>
+	</div>
+	<script ></script>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.fullPage.min.js"></script>
+	<script>
+		
+		$('.fullpage').fullpage({
+			sectionSelector:'.page',
+			 sectionsColor: [
+				'#0DA5D6',
+				'#2AB561',
+				'#DE8910',
+				'#16BA9D',
+				'#0DA5D6'
+			],
+			// 当每一屏滚动完成会执行
+			afterLoad: function (a, key, c) {
+				// 将其它屏DOM中的 current 类名
+				// 移除
+				$('.page').removeClass('current');
+
+				// 获取当前屏对应的 DOM，添加 current 类名
+				setTimeout(function () {
+					$('.page').eq(key - 1).addClass('current');
+				}, 20);
+			}
+		});
+	</script>
+</body>
+</html>

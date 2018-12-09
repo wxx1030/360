@@ -1,0 +1,118 @@
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.page {
+	overflow: hidden;
+}
+
+/* 第一屏 */
+.first .logo {
+	width: 251px;
+	height: 186px;
+	margin: 80px auto;
+	background-image: url(../images/logo.png);
+}
+.first .text {
+	text-align: center;
+}
+.first .text img {
+	opacity: 0;
+	margin: 0 30px;
+}
+
+.first .info {
+	width: 772px;
+	height: 49px;
+	margin: 80px auto 0;
+	background-image: url(../images/info_1.png);
+}
+/* 第一屏动画 */
+.first.current .text img {
+	margin: 0 8px;
+	opacity: 1;
+	transition: all 1.5s;
+
+}
+/* 第二屏 */
+.second > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 130px;
+} 
+.second .shield {
+	width: 475px;
+	font-size: 0;
+}
+.second .info {
+	height: 309px;
+	width: 635px;
+	background-image: url(../images/info_2.png);
+}
+.second .shield img:first-child {
+	transform: translate(500px, 300px) rotate(145deg);
+}
+.second .shield img:nth-child(2) {
+	transform: translate(100px, 200px) rotate(88deg);
+}
+.second .shield img:nth-child(3) {
+	transform: translate(180px, -50px) rotate(59deg);
+}
+.second .shield img:nth-child(4) {
+	transform: translate(100px, -140px) rotate(36deg);
+}
+.second .shield img:nth-child(5) {
+	transform: translate(600px, 250px) rotate(78deg);
+}
+.second .shield img:nth-child(6) {
+	transform: translate(800px, -300px) rotate(150deg);
+}
+.second .shield img:nth-child(7) {
+	transform: translate(-100px, 150px) rotate(175deg);
+}
+.second .shield img:nth-child(8) {
+	transform: translate(0px, 100px) rotate(80deg);
+}
+.second .shield img:last-child {
+	transform: translate(750px, 50px) rotate(90deg);
+}
+/*第二屏动画*/
+.second.current .shield img {
+	transform: translate(0, 0) rotate(0deg);
+	transition: all 1s;
+}
+/* 第三屏 */
+.third > div {
+	display: flex;
+	padding: 0 80px;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+.third .info {
+	width: 631px;
+	height: 278px;
+	background-image: url(../images/info_3.png);
+}
+.third .circle {
+	width: 453px;
+	height: 449px;
+	background-image: url(../images/circle.png);
+}
+.third .rocket {
+	position: absolute;
+	bottom: -204px;
+	left: 520px;
+	width: 203px;
+	height: 204px;
+	background-image: url(../images/rocket.png);
+}
+/*第三屏动画*/
+.third.current .rocket {
+	transform: translate(550px, -480px);
+	transition: all 1s;
+}
+/* 第四屏 */
